@@ -6,7 +6,7 @@ import (
 )
 
 type Product struct {
-	SlackUsername string `json:"slackUserName"`
+	SlackUsername string `json:"slackUsername"`
 	Backend       bool   `json:"backend"`
 	Age           int    `json:"age"`
 	Bio           string `json:"bio"`
