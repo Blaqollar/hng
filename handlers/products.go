@@ -16,6 +16,7 @@ func NewProducts(l *log.Logger) *Products {
 }
 
 func (p *Products) GetProducts(rw http.ResponseWriter, r *http.Request) {
+	rw.Header().Set("Content-Type", "application/json")
 	lp := data.GetProducts()
 	err := lp.ToJSON(rw)
 	if err != nil {
