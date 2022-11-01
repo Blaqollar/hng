@@ -12,7 +12,7 @@ type Product struct {
 	Bio           string `json:"bio"`
 }
 
-type Products []*Product
+type Products Product
 
 func (p *Products) ToJSON(w io.Writer) error {
 	e := json.NewEncoder(w)
@@ -28,11 +28,9 @@ func GetProducts() Products {
 	return productList
 }
 
-var productList = []*Product{
-	&Product{
-		SlackUsername: "uchedingba",
-		Backend:       true,
-		Age:           27,
-		Bio:           "I am a graduate of computer Science interested in Software Engineering(Backend)",
-	},
+var productList = Products{
+	SlackUsername: "uchedingba",
+	Backend:       true,
+	Age:           27,
+	Bio:           "I am a graduate of computer Science interested in Software Engineering(Backend)",
 }
