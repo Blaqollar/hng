@@ -7,13 +7,13 @@ import (
 )
 
 type Product struct {
-	SlackUsername   string    `json:"slack_name"`
-	Day             string    `json:"current_day"`
-	Time            time.Time `json:"utc_time"`
-	Track           string    `json:"track"`
-	Github_file_url string    `json:"github_file_url"`
-	Github_repo_url string    `json:"github_repo_url"`
-	Status_code     int       `json:"status_code"`
+	SlackUsername   string `json:"slack_name"`
+	Day             string `json:"current_day"`
+	Time            string `json:"utc_time"`
+	Track           string `json:"track"`
+	Github_file_url string `json:"github_file_url"`
+	Github_repo_url string `json:"github_repo_url"`
+	Status_code     int    `json:"status_code"`
 }
 
 type Products Product
@@ -35,7 +35,7 @@ func GetProducts() Products {
 var productList = Products{
 	SlackUsername:   "uchedingba",
 	Day:             "Monday",
-	Time:            time.Now().UTC(),
+	Time:            time.Now().Format("2006-01-02T15:04:05Z"),
 	Track:           "backend",
 	Github_file_url: "https://github.com/Blaqollar/hng/blob/main/main.go",
 	Github_repo_url: "https://github.com/Blaqollar/hng",
