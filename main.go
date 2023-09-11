@@ -17,8 +17,8 @@ func main() {
 	getRouter := sm.Methods("GET").Subrouter()
 	getRouter.HandleFunc("/", np.GetProducts)
 
-//Setting up the server //tune the elements to timeout to avoid bad connections errors 
-	s := &http.Server{ 
+	//Setting up the server //tune the elements to timeout to avoid bad connections errors
+	s := &http.Server{
 		Addr:         ":8080",
 		Handler:      sm,
 		ReadTimeout:  6 * time.Second,
