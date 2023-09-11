@@ -35,7 +35,7 @@ func GetProducts() Products {
 var productList = Products{
 	SlackUsername:   "uchedingba",
 	Day:             "Monday",
-	Time:            time.Now(),
+	Time:            time.Now().UTC(),
 	Track:           "backend",
 	Github_file_url: "https://github.com/Blaqollar/hng/blob/main/main.go",
 	Github_repo_url: "https://github.com/Blaqollar/hng",
