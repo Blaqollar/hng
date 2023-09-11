@@ -15,7 +15,7 @@ func main() {
 	np := handlers.NewProducts(l)
 	sm := mux.NewRouter()
 	getRouter := sm.Methods("GET").Subrouter()
-	getRouter.HandleFunc("/", np.GetProducts)
+	getRouter.HandleFunc("/api", np.GetProducts)
 
 	//Setting up the server //tune the elements to timeout to avoid bad connections errors
 	s := &http.Server{
